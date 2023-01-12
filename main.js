@@ -87,3 +87,73 @@
 // поки відвідувач його не введе.
 // Також треба дозволити користувачеві зупинити процес введення, відправивши порожній
 // рядок або натиснувши "Скасувати". У цьому випадку функція повинна повернути null.
+
+// function getConfirm() {
+//   check = true;
+
+//   while (check) {
+//     check = false;
+//     num = prompt("numbers", "");
+//     if (num == null || num == "") {
+//       return null;
+//     } else if (!isNaN(num)) {
+//       return +num;
+//     } else {
+//       check = true;
+//     }
+//   }
+// }
+
+// console.log(getConfirm());
+
+// // -----------------------------Завдання No4. Випадкове число від min до max
+// // Вбудований метод Math.random() повертає випадкове число від 0 (включно) до 1 (але не включаючи 1)
+// // Напишіть функцію random(min , max), яка генерує випадкове число з плаваючою точкою
+// // від min до max (але не включаючи max).
+
+// function getRandom(min, max) {
+//   return Math.random() * (max - min) + min;
+// }
+// console.log(getRandom(1, 5));
+
+// // -----------------------------Завдання No5. Випадкове ціле число від min до max
+// // Напишіть функцію randomInteger( min , max), яка генерує випадкове ціле число від min до max (включно).
+// // Будь-яке число з інтервалу min..max має з'являтися з однаковою ймовірністю .
+// function getRandomInteger(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+// console.log(getRandomInteger(1, 5));
+
+// // ------------------------------Завдання No6. Зробити перший символ великим
+// // Напишіть функцію ucFirst( str ), яка повертає рядок str із великим першим символом.
+
+// function ucFirst(text) {
+//   const letters = text.split("");
+//   letters[0] = letters[0].toUpperCase();
+//   return letters.join("");
+// }
+
+// console.log(ucFirst("вася"));
+
+// // ------------------------Завдання No7. Перевірка на спам
+// // Напишіть функцію checkSpam ( str ), яка повертає true, якщо str містить 'viagra ' або 'XXX', а інакше false .
+// // Функція повинна бути нечутлива до регістру
+
+// через розбивання на символи та приведення в строку
+// function checkSpam(text) {
+//   let result;
+//   result =
+//     text.toLowerCase().includes("viagra") || text.toLowerCase().includes("xxx");
+//   return result;
+// }
+
+// вбо через регулярний вираз
+// const checkSpam = function (text) {
+//   return /\b(viagra|xxx)\b/i.test(text);
+// };
+
+// console.log(checkSpam("vIagRa"));
+// console.log(checkSpam("mail"));
+// console.log(checkSpam("see xXx"));
