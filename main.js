@@ -153,7 +153,47 @@
 // const checkSpam = function (text) {
 //   return /\b(viagra|xxx)\b/i.test(text);
 // };
-
+// // TEST
 // console.log(checkSpam("vIagRa"));
 // console.log(checkSpam("mail"));
 // console.log(checkSpam("see xXx"));
+
+// --------------------------Завдання No8. Усічення рядка
+// Створіть функцію truncate(str , maxlength), яка перевіряє довжину рядка str і, якщо вона
+// перевершує maxlength, замінює кінець str на "...", так, щоб її довжина дорівнювала maxlength .
+// Результатом функції має бути той самий рядок, якщо усічення не потрібно, або, якщо
+// необхідно, усічений рядок.
+
+// через slice або substring, один зробила через if else, потім зробила рефакторинг, з substring переписала на тернарний
+
+// function truncate(str, maxLength) {
+//   let result;
+//   if (str.length <= maxLength) {
+//     result = str;
+//   } else {
+//     result = str.slice(0, maxLength) + "...";
+//   }
+//   return result;
+// }
+// function truncate(str, maxLength) {
+//   if (str.length > maxLength) {
+//     return str.slice(0, maxLength) + "...";
+//   }
+//   return str;
+// }
+// function truncate(str, maxLength) {
+//   let result;
+//   result =
+//     str.length <= maxLength
+//       ? (result = str)
+//       : (result = str.substring(0, maxLength) + "...");
+//   return result;
+// }
+// // TEST
+// console.log(truncate( "Ось що мені хотілося б сказати на цю тему:", 20));
+// console.log(truncate( "Усім привіт!", 20));
+
+// --------------------------Завдання No9. Виділити число
+// Є вартість у вигляді рядка "$120". Тобто спочатку йде знак валюти, а потім число.
+// Створіть функцію extractCurrencyValue(str ), яка з такого рядка виділятиме числове
+// значення і повертатиме його.
