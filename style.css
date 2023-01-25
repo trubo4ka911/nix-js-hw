@@ -1,0 +1,54 @@
+table {
+border-collapse: collapse;
+}
+
+td,
+th {
+border: 1px solid black;
+padding: 5px;
+text-align: center;
+}
+
+th {
+font-weight: 600;
+background-color: grey;
+color: white;
+}
+
+
+.notification {
+position: fixed;
+z-index: 1000;
+padding: 5px 10px;            
+font-size: 20px;
+background: white;
+text-align: center;
+}
+
+.welcome {
+background: #b80000;
+color: yellow;
+}
+
+
+.menu ul {
+    
+margin: 0;
+list-style: none;
+padding-left: 20px;
+display: none;
+}
+
+.menu .title::after {
+content: '\2935 ';
+cursor: pointer;
+font-size: 80%;
+color: green;
+}
+.menu.open .title::after {
+content: '\2937';
+}
+
+.menu.open ul {
+display: block;
+}
